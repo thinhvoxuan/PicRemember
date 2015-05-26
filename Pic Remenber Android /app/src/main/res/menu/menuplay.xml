@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:id="@+id/MenuBottom" android:menuCategory="container" android:enabled="true" android:visible="true">
+        <item android:id="@+id/itMenuPause" android:numericShortcut="1" android:title="Pause" android:alphabeticShortcut="p"></item>
+        <item android:id="@+id/itMenuQuit" android:numericShortcut="2" android:title="Quit" android:alphabeticShortcut="q"></item>
+    </group>
+    
+
+</menu>

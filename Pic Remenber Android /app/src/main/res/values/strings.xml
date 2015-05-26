@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pic Remenber</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Start">Start</string>
+    <string name="Option">Option</string>
+    <string name="HighScore">HighScore</string>
+    <string name="Exit">Exit</string>
+    <string name="Lan">Language</string>
+    <string name="Welcome">Welcome to Game Pic Remember</string>
+
+</resources>
