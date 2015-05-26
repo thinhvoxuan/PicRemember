@@ -15,6 +15,7 @@
 		14F40FE21B14673A009B82DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE11B14673A009B82DF /* MainViewController.swift */; };
 		14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE31B14677B009B82DF /* PlayViewController.swift */; };
 		14F40FE61B14678F009B82DF /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE51B14678F009B82DF /* OptionViewController.swift */; };
+		14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE71B14748F009B82DF /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		14F40FE11B14673A009B82DF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controller/MainViewController.swift; sourceTree = "<group>"; };
 		14F40FE31B14677B009B82DF /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayViewController.swift; path = Controller/PlayViewController.swift; sourceTree = "<group>"; };
 		14F40FE51B14678F009B82DF /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionViewController.swift; path = Controller/OptionViewController.swift; sourceTree = "<group>"; };
+		14F40FE71B14748F009B82DF /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoreViewController.swift; path = Controller/ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				14F40FE11B14673A009B82DF /* MainViewController.swift */,
 				14F40FE31B14677B009B82DF /* PlayViewController.swift */,
 				14F40FE51B14678F009B82DF /* OptionViewController.swift */,
+				14F40FE71B14748F009B82DF /* ScoreViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				14F40FE21B14673A009B82DF /* MainViewController.swift in Sources */,
 				14F40FE61B14678F009B82DF /* OptionViewController.swift in Sources */,
+				14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */,
 				14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */,
 				14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */,
 			);
