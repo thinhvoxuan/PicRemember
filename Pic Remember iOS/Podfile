@@ -1,0 +1,18 @@
+#
+# Copyright (c) 2015, HUY PHAM., JSC
+# All rights reserved.
+#
+
+source "https://github.com/CocoaPods/Specs.git"
+
+platform :ios, "7.0"
+
+project_name = "Pic Remember"
+
+workspace "#{project_name}.xcworkspace"
+
+xcodeproj "#{project_name}/#{project_name}.xcodeproj"
+
+target project_name do
+  pod 'KxMenu', '~> 1'
+end

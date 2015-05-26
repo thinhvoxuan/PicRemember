@@ -32,6 +32,15 @@ DerivedData
 
 Carthage/Build
 
+
+
+
+# Android project
+#
+#
+#
+
+
 .ide
 # Built application files
 *.apk
@@ -60,3 +69,7 @@ proguard/
 # Log Files
 *.log
 Pic Remenber Android /.idea
+Pic Remember iOS/Pods
+Podfile.lock
+Pic Remember iOS/Pic Remember.xcworkspace
+Pic Remember Android /.idea

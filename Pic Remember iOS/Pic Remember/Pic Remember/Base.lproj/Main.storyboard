@@ -118,22 +118,24 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Pic Remember" id="jpi-iZ-V5n"/>
+                    <navigationItem key="navigationItem" title="Pic Remember" id="jpi-iZ-V5n">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gUf-cw-iE3"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893" y="1000"/>
         </scene>
-        <!--Play View Controller-->
+        <!--PlayViewCoontroller-->
         <scene sceneID="pvc-kf-bl9">
             <objects>
-                <viewController id="9FD-lK-hhu" customClass="PlayViewController" customModule="Pic_Remember" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PlayViewCoontroller" id="9FD-lK-hhu" customClass="PlayViewController" customModule="Pic_Remember" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HDV-l8-cVE"/>
                         <viewControllerLayoutGuide type="bottom" id="t1N-Oe-P7V"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DuH-3H-WbG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
