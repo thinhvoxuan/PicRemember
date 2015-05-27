@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146C371E1B15AFB700F260D7 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C371D1B15AFB700F260D7 /* UserProfile.swift */; };
 		14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FBD1B146448009B82DF /* AppDelegate.swift */; };
 		14F40FC31B146448009B82DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F40FC11B146448009B82DF /* Main.storyboard */; };
 		14F40FC81B146448009B82DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F40FC61B146448009B82DF /* LaunchScreen.xib */; };
@@ -16,7 +17,7 @@
 		14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE31B14677B009B82DF /* PlayViewController.swift */; };
 		14F40FE61B14678F009B82DF /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE51B14678F009B82DF /* OptionViewController.swift */; };
 		14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FE71B14748F009B82DF /* ScoreViewController.swift */; };
-		DCC20A54E8F10EAA94EF8081 /* libPods-Pic Remember.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 889795A369834C9798A81711 /* libPods-Pic Remember.a */; };
+		D2F920D230EC85B9DF754AFD /* Pods_Pic_Remember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F99ABCCCAF4E5DD292A878 /* Pods_Pic_Remember.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		03E509A72261052C64080756 /* Pods-Pic Remember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Remember.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Pic Remember/Pods-Pic Remember.release.xcconfig"; sourceTree = "<group>"; };
+		146C371D1B15AFB700F260D7 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = Model/UserProfile.swift; sourceTree = "<group>"; };
 		14F40FB81B146448009B82DF /* Pic Remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic Remember.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F40FBC1B146448009B82DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F40FBD1B146448009B82DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +46,7 @@
 		14F40FE31B14677B009B82DF /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayViewController.swift; path = Controller/PlayViewController.swift; sourceTree = "<group>"; };
 		14F40FE51B14678F009B82DF /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionViewController.swift; path = Controller/OptionViewController.swift; sourceTree = "<group>"; };
 		14F40FE71B14748F009B82DF /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoreViewController.swift; path = Controller/ScoreViewController.swift; sourceTree = "<group>"; };
-		889795A369834C9798A81711 /* libPods-Pic Remember.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pic Remember.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F99ABCCCAF4E5DD292A878 /* Pods_Pic_Remember.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pic_Remember.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70D15AF74462C00CB2425FD /* Pods-Pic Remember.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Remember.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Pic Remember/Pods-Pic Remember.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCC20A54E8F10EAA94EF8081 /* libPods-Pic Remember.a in Frameworks */,
+				D2F920D230EC85B9DF754AFD /* Pods_Pic_Remember.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14ED27021B15697200BF6BFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				146C371D1B15AFB700F260D7 /* UserProfile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		14F40FAF1B146448009B82DF = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		14F40FBA1B146448009B82DF /* Pic Remember */ = {
 			isa = PBXGroup;
 			children = (
+				14ED27021B15697200BF6BFD /* Model */,
 				14F40FE01B14669F009B82DF /* Controller */,
 				14F40FDF1B146689009B82DF /* Main */,
 				14F40FC11B146448009B82DF /* Main.storyboard */,
@@ -147,7 +158,7 @@
 		6170D223D8962D68414CBAC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				889795A369834C9798A81711 /* libPods-Pic Remember.a */,
+				87F99ABCCCAF4E5DD292A878 /* Pods_Pic_Remember.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,6 +184,7 @@
 				14F40FB51B146448009B82DF /* Frameworks */,
 				14F40FB61B146448009B82DF /* Resources */,
 				0FA296CD9E2405D6652F0838 /* Copy Pods Resources */,
+				7E404530AFD9EE4EE3701488 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +301,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		7E404530AFD9EE4EE3701488 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Pic Remember/Pods-Pic Remember-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -298,6 +325,7 @@
 			files = (
 				14F40FE21B14673A009B82DF /* MainViewController.swift in Sources */,
 				14F40FE61B14678F009B82DF /* OptionViewController.swift in Sources */,
+				146C371E1B15AFB700F260D7 /* UserProfile.swift in Sources */,
 				14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */,
 				14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */,
 				14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */,
@@ -382,6 +410,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,6 +449,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -434,6 +464,7 @@
 				INFOPLIST_FILE = "Pic Remember/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -446,6 +477,7 @@
 				INFOPLIST_FILE = "Pic Remember/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

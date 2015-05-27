@@ -4,15 +4,15 @@
 #
 
 source "https://github.com/CocoaPods/Specs.git"
-
-platform :ios, "7.0"
-
+use_frameworks!
+platform :ios, "8.0"
 project_name = "Pic Remember"
-
 workspace "#{project_name}.xcworkspace"
-
 xcodeproj "#{project_name}/#{project_name}.xcodeproj"
 
 target project_name do
   pod 'KxMenu', '~> 1'
+  pod 'MBProgressHUD', '~> 0.9.1'
+  pod 'DLRadioButton'
+  pod 'M13Checkbox', '~> 1.1.0'
 end

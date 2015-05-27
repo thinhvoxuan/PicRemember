@@ -7,29 +7,41 @@
 //
 
 import UIKit
+import DLRadioButton
+import M13Checkbox
 
 class OptionViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var typeButton: DLRadioButton!
+    
+    @IBAction func selectType(sender: DLRadioButton) {
+        let type = sender.currentTitle!
+        println("type change: \(type)")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func changeLevel(sender: DLRadioButton) {
+        let level = sender.currentTitle!
+        println("level change: \(level)")
     }
-    */
 
+    
+    @IBAction func changeTheme(sender: DLRadioButton) {
+        let theme = sender.currentTitle!
+        println("theme change: \(theme)")
+    }
+    
+    @IBOutlet weak var clicksound: M13Checkbox! {
+        didSet{
+            clicksound!.titleLabel.text = "Click"
+            clicksound.checkAlignment = M13CheckboxAlignmentLeft
+        }
+    }
+    
+    @IBOutlet weak var clickCorrect: M13Checkbox! {
+        didSet{
+            clickCorrect!.titleLabel.text = "Correct"
+            clickCorrect.checkAlignment = M13CheckboxAlignmentLeft
+        }
+    }
+    
 }

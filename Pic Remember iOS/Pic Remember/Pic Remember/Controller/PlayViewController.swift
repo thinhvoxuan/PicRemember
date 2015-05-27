@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KxMenu
 
 class PlayViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class PlayViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false);
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +34,25 @@ class PlayViewController: UIViewController {
     }
     */
 
+    @IBAction func openOption(sender: UIBarButtonItem) {
+        
+        
+        
+        let item = KxMenuItem("string",image: UIImage(named: "actionIcon")!, target: self, action: Selector("clickItem"))
+        
+        let item1 = KxMenuItem("string",image: UIImage(named: "actionIcon")!, target: self, action: Selector("clickItem"))
+        
+        let item2 = KxMenuItem("string",image: UIImage(named: "actionIcon")!, target: self, action: Selector("clickItem"))
+        
+        let item3 = KxMenuItem("string",image: UIImage(named: "actionIcon")!, target: self, action: Selector("clickItem"))
+        
+        
+        let buttonItemView = sender.valueForKey("view") as! UIView
+        KxMenu.showMenuInView(self.navigationController!.view, fromRect: buttonItemView.frame, menuItems: [item, item1, item2, item3]);
+        
+    }
+    
+    func clickItem(){
+        println("option click")
+    }
 }
