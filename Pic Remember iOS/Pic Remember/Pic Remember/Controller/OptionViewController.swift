@@ -10,38 +10,24 @@ import UIKit
 import DLRadioButton
 import M13Checkbox
 
-class OptionViewController: UIViewController {
+class OptionViewController: UITableViewController {
 
-    @IBOutlet weak var typeButton: DLRadioButton!
+    let user = UserProfile()
     
-    @IBAction func selectType(sender: DLRadioButton) {
-        let type = sender.currentTitle!
-        println("type change: \(type)")
-    }
-    
-    @IBAction func changeLevel(sender: DLRadioButton) {
-        let level = sender.currentTitle!
-        println("level change: \(level)")
-    }
-
-    
-    @IBAction func changeTheme(sender: DLRadioButton) {
-        let theme = sender.currentTitle!
-        println("theme change: \(theme)")
-    }
-    
-    @IBOutlet weak var clicksound: M13Checkbox! {
+    @IBOutlet weak var typeSetting: UITableViewCell!{
         didSet{
-            clicksound!.titleLabel.text = "Click"
-            clicksound.checkAlignment = M13CheckboxAlignmentLeft
+            typeSetting.detailTextLabel!.text = self.user.type
         }
     }
-    
-    @IBOutlet weak var clickCorrect: M13Checkbox! {
+
+    @IBOutlet weak var levelSetting: UITableViewCell!{
         didSet{
-            clickCorrect!.titleLabel.text = "Correct"
-            clickCorrect.checkAlignment = M13CheckboxAlignmentLeft
+            levelSetting.detailTextLabel!.text = self.user.level
         }
     }
-    
+    @IBOutlet weak var themeSetting: UITableViewCell!{
+        didSet{
+            themeSetting.detailTextLabel!.text = self.user.theme
+        }
+    }
 }
