@@ -20,10 +20,22 @@ class UserProfile: NSObject {
         userdefault.setValue(value, forKey: key);
     }
     
+    
+    func getBoolFromNSUserDefault(key: String, defaultValue: Bool =  true) -> Bool {
+        let value = userdefault.valueForKey(key) as? Bool ?? defaultValue
+        return value;
+    }
+    
+    func setBoolToNSUserDefault(key: String, value: Bool) {
+        userdefault.setValue(value, forKey: key);
+    }
+    
     struct Setting {
         static let TypeKey : String = "SETTING.TYPE"
         static let LevelKey : String = "SETTING.LEVEL"
         static let ThemeKey : String = "SETTING.THEME"
+        static let ClickKey : String = "SETTING.CLICKKEY"
+        static let CorrectKey : String = "SETTING.CORRECTKEY"
     }
     
     var type: String{
@@ -49,6 +61,24 @@ class UserProfile: NSObject {
         }
         get{
             return getStringFromNSUserDefault(Setting.ThemeKey, defaultValue: "Default")
+        }
+    }
+    
+    var correctsound :Bool {
+        set {
+            setBoolToNSUserDefault(Setting.CorrectKey, value: newValue)
+        }
+        get{
+            return getBoolFromNSUserDefault(Setting.CorrectKey, defaultValue: true)
+        }
+    }
+    
+    var clicksound :Bool {
+        set {
+            setBoolToNSUserDefault(Setting.ClickKey, value: newValue)
+        }
+        get{
+            return getBoolFromNSUserDefault(Setting.ClickKey, defaultValue: true)
         }
     }
     

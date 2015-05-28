@@ -12,6 +12,11 @@ import M13Checkbox
 
 class OptionViewController: UITableViewController {
 
+    let SOUNDSECTION = 1
+    let CLICKSOUND = 0
+    let CORRECTSOUND = 1
+    
+    
     let user = UserProfile()
     
     @IBOutlet weak var typeSetting: UITableViewCell!{
@@ -50,6 +55,48 @@ class OptionViewController: UITableViewController {
                 detailView.kindKeyData = key;
                 detailView.currentData = type;
             }
+        }
+    }
+ 
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let tableCell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        
+        let index = indexPath.row
+        let section = indexPath.section
+
+        if (section == 1){
+            var valueCell:Bool = false
+            switch index {
+            case CLICKSOUND:
+                valueCell = user.clicksound
+            case CORRECTSOUND:
+                valueCell = user.correctsound
+            default:
+                break
+            }
+            tableCell.accessoryType = valueCell ?  UITableViewCellAccessoryType.Checkmark :  UITableViewCellAccessoryType.None
+        }
+        return tableCell;
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let index = indexPath.row
+        let section = indexPath.section
+        let cell = tableView.cellForRowAtIndexPath(indexPath);
+        
+        if (section == 1){
+            var newValue:Bool = false
+            switch index {
+            case CLICKSOUND:
+                user.clicksound = !user.clicksound
+                newValue = user.clicksound
+            case CORRECTSOUND:
+                user.correctsound = !user.correctsound
+                newValue = user.correctsound
+            default:
+                break
+            }    
+            cell!.accessoryType = newValue ?  UITableViewCellAccessoryType.Checkmark :  UITableViewCellAccessoryType.None
         }
     }
     

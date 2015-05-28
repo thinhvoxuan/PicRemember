@@ -176,7 +176,7 @@
         <scene sceneID="jCt-Em-rjM">
             <objects>
                 <tableViewController id="wvB-ZJ-l9s" customClass="OptionViewController" customModule="Pic_Remember" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oGe-dw-cQ0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="44" sectionFooterHeight="22" id="oGe-dw-cQ0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,7 +256,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Sound" id="be4-Bs-Xvl">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" editingAccessoryType="checkmark" textLabel="vCE-RS-ZJU" style="IBUITableViewCellStyleDefault" id="CDd-FS-7Q6">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" editingAccessoryType="checkmark" textLabel="vCE-RS-ZJU" style="IBUITableViewCellStyleDefault" id="CDd-FS-7Q6">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CDd-FS-7Q6" id="ByN-TS-Kkh">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -270,7 +270,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" editingAccessoryType="checkmark" textLabel="eaj-S3-BBm" style="IBUITableViewCellStyleDefault" id="1mh-VK-N19">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" editingAccessoryType="checkmark" textLabel="eaj-S3-BBm" style="IBUITableViewCellStyleDefault" id="1mh-VK-N19">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1mh-VK-N19" id="0ON-Fb-5kW">
                                             <autoresizingMask key="autoresizingMask"/>
