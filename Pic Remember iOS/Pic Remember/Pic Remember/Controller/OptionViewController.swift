@@ -30,4 +30,27 @@ class OptionViewController: UITableViewController {
             themeSetting.detailTextLabel!.text = self.user.theme
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.tableView.reloadData()
+        self.updateUI();
+    }
+    
+    func updateUI(){
+        typeSetting.detailTextLabel!.text = self.user.type
+        levelSetting.detailTextLabel!.text = self.user.level
+        themeSetting.detailTextLabel!.text = self.user.theme
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailView = segue.destinationViewController as? DetailViewController {
+            if let usertable = sender! as? UITableViewCell {
+                let key = usertable.textLabel!.text!
+                let type : String = self.user.valueForKey(key.lowercaseString) as? String ?? ""
+                detailView.kindKeyData = key;
+                detailView.currentData = type;
+            }
+        }
+    }
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145314BE1B17182F00042B96 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145314BD1B17182F00042B96 /* DetailViewController.swift */; };
 		146C371E1B15AFB700F260D7 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C371D1B15AFB700F260D7 /* UserProfile.swift */; };
 		14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FBD1B146448009B82DF /* AppDelegate.swift */; };
 		14F40FC31B146448009B82DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F40FC11B146448009B82DF /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		03E509A72261052C64080756 /* Pods-Pic Remember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Remember.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Pic Remember/Pods-Pic Remember.release.xcconfig"; sourceTree = "<group>"; };
+		145314BD1B17182F00042B96 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
 		146C371D1B15AFB700F260D7 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = Model/UserProfile.swift; sourceTree = "<group>"; };
 		14F40FB81B146448009B82DF /* Pic Remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic Remember.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F40FBC1B146448009B82DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				14F40FE31B14677B009B82DF /* PlayViewController.swift */,
 				14F40FE51B14678F009B82DF /* OptionViewController.swift */,
 				14F40FE71B14748F009B82DF /* ScoreViewController.swift */,
+				145314BD1B17182F00042B96 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */,
 				14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */,
 				14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */,
+				145314BE1B17182F00042B96 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

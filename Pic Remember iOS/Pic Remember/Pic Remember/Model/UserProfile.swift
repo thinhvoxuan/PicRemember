@@ -11,7 +11,7 @@ import UIKit
 class UserProfile: NSObject {
     let userdefault = NSUserDefaults.standardUserDefaults();
     
-    func getStringFromNSUserDefault(key: String, defaultValue: String) -> String {
+    func getStringFromNSUserDefault(key: String, defaultValue: String = " ") -> String {
         let value = userdefault.valueForKey(key) as? String ?? defaultValue
         return value;
     }
