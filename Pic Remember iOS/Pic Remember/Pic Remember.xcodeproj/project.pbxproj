@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143202C71B18178600C36339 /* CardModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143202C61B18178600C36339 /* CardModelManager.swift */; };
 		145314BE1B17182F00042B96 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145314BD1B17182F00042B96 /* DetailViewController.swift */; };
+		145314C11B17426000042B96 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145314C01B17426000042B96 /* CardCollectionCell.swift */; };
 		146C371E1B15AFB700F260D7 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C371D1B15AFB700F260D7 /* UserProfile.swift */; };
 		14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FBD1B146448009B82DF /* AppDelegate.swift */; };
 		14F40FC31B146448009B82DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F40FC11B146448009B82DF /* Main.storyboard */; };
@@ -33,7 +35,9 @@
 
 /* Begin PBXFileReference section */
 		03E509A72261052C64080756 /* Pods-Pic Remember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Remember.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Pic Remember/Pods-Pic Remember.release.xcconfig"; sourceTree = "<group>"; };
+		143202C61B18178600C36339 /* CardModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardModelManager.swift; path = Model/CardModelManager.swift; sourceTree = "<group>"; };
 		145314BD1B17182F00042B96 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
+		145314C01B17426000042B96 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCollectionCell.swift; path = CustomUI/CardCollectionCell.swift; sourceTree = "<group>"; };
 		146C371D1B15AFB700F260D7 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = Model/UserProfile.swift; sourceTree = "<group>"; };
 		14F40FB81B146448009B82DF /* Pic Remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic Remember.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F40FBC1B146448009B82DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,10 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		145314BF1B173FB100042B96 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				145314C01B17426000042B96 /* CardCollectionCell.swift */,
+			);
+			name = CustomUI;
+			sourceTree = "<group>";
+		};
 		14ED27021B15697200BF6BFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				146C371D1B15AFB700F260D7 /* UserProfile.swift */,
+				143202C61B18178600C36339 /* CardModelManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -102,6 +115,7 @@
 		14F40FBA1B146448009B82DF /* Pic Remember */ = {
 			isa = PBXGroup;
 			children = (
+				145314BF1B173FB100042B96 /* CustomUI */,
 				14ED27021B15697200BF6BFD /* Model */,
 				14F40FE01B14669F009B82DF /* Controller */,
 				14F40FDF1B146689009B82DF /* Main */,
@@ -327,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F40FE21B14673A009B82DF /* MainViewController.swift in Sources */,
+				145314C11B17426000042B96 /* CardCollectionCell.swift in Sources */,
 				14F40FE61B14678F009B82DF /* OptionViewController.swift in Sources */,
 				146C371E1B15AFB700F260D7 /* UserProfile.swift in Sources */,
+				143202C71B18178600C36339 /* CardModelManager.swift in Sources */,
 				14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */,
 				14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */,
 				14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */,

@@ -10,6 +10,12 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
+    @IBOutlet weak var menuSegment: UISegmentedControl!{
+        didSet{
+            menuSegment.selectedSegmentIndex = 0
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
