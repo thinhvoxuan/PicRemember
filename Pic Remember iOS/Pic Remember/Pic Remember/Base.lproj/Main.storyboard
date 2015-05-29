@@ -142,8 +142,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROy-z8-gPN">
                                 <rect key="frame" x="0.0" y="64" width="600" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time: 0   Click: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-wR-9hB">
-                                        <rect key="frame" x="231" y="29" width="138" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 0   Click: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-wR-9hB">
+                                        <rect key="frame" x="236" y="29" width="128.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -160,47 +160,63 @@
                                 <rect key="frame" x="0.0" y="144" width="600" height="412"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-CW-eKH">
-                                        <rect key="frame" x="5" y="-89" width="590" height="590"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="412"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gQb-CW-eKH" secondAttribute="height" multiplier="1:1" id="jjC-12-T8R"/>
                                             <constraint firstAttribute="width" secondItem="gQb-CW-eKH" secondAttribute="height" multiplier="1:1" priority="500" id="r2b-uI-fwl"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="Bnx-Lf-IGO">
-                                            <size key="itemSize" width="170" height="168"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7Ac-Ww-6AA">
+                                            <size key="itemSize" width="20" height="20"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="8F0-Gz-mRm" customClass="CardCollectionCell" customModule="Pic_Remember" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cardCell" id="8F0-Gz-mRm" customClass="CardCollectionCell" customModule="Pic_Remember" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="168"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sQM-EI-2MC" userLabel="OriginImage">
-                                                            <rect key="frame" x="16" y="16" width="138" height="136"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sQM-EI-2MC" userLabel="OriginImage">
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="cgY-Nf-DLk" userLabel="HideImage">
-                                                            <rect key="frame" x="8" y="8" width="154" height="152"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="cgY-Nf-DLk" userLabel="HideImage">
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottomMargin" secondItem="sQM-EI-2MC" secondAttribute="bottom" constant="8" id="0tI-tU-iwq"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="cgY-Nf-DLk" secondAttribute="trailing" id="4gQ-xl-ilA"/>
-                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="top" secondItem="8F0-Gz-mRm" secondAttribute="topMargin" constant="8" id="50q-7T-vMI"/>
-                                                    <constraint firstItem="cgY-Nf-DLk" firstAttribute="top" secondItem="8F0-Gz-mRm" secondAttribute="topMargin" id="5op-gE-hvH"/>
-                                                    <constraint firstItem="cgY-Nf-DLk" firstAttribute="leading" secondItem="8F0-Gz-mRm" secondAttribute="leadingMargin" id="BFd-FK-YOy"/>
-                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="leading" secondItem="8F0-Gz-mRm" secondAttribute="leadingMargin" constant="8" id="RfH-w2-S4H"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="sQM-EI-2MC" secondAttribute="trailing" constant="8" id="beU-JY-WGX"/>
-                                                    <constraint firstAttribute="bottomMargin" secondItem="cgY-Nf-DLk" secondAttribute="bottom" id="ckk-Yz-afM"/>
+                                                    <constraint firstAttribute="centerY" secondItem="sQM-EI-2MC" secondAttribute="centerY" id="48x-bi-YnD"/>
+                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="trailing" secondItem="8F0-Gz-mRm" secondAttribute="trailingMargin" id="4Tu-V6-olq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cgY-Nf-DLk" secondAttribute="bottom" id="9BV-Qh-K6p"/>
+                                                    <constraint firstItem="cgY-Nf-DLk" firstAttribute="top" secondItem="8F0-Gz-mRm" secondAttribute="top" id="FmI-NR-3c1"/>
+                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="bottom" secondItem="8F0-Gz-mRm" secondAttribute="bottomMargin" id="HMZ-iI-2sC"/>
+                                                    <constraint firstAttribute="centerX" secondItem="sQM-EI-2MC" secondAttribute="centerX" id="Inj-bJ-fax"/>
+                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="leading" secondItem="8F0-Gz-mRm" secondAttribute="leadingMargin" id="Q09-sS-RL7"/>
+                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="top" secondItem="8F0-Gz-mRm" secondAttribute="topMargin" id="S2Q-fa-rDb"/>
+                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="top" secondItem="8F0-Gz-mRm" secondAttribute="top" id="UI7-EJ-fUX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sQM-EI-2MC" secondAttribute="trailing" id="aRh-72-AQf"/>
+                                                    <constraint firstItem="cgY-Nf-DLk" firstAttribute="leading" secondItem="8F0-Gz-mRm" secondAttribute="leading" id="aiU-uM-F5V"/>
+                                                    <constraint firstItem="sQM-EI-2MC" firstAttribute="leading" secondItem="8F0-Gz-mRm" secondAttribute="leading" id="uju-XF-dWO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sQM-EI-2MC" secondAttribute="bottom" id="yo9-Oh-NrB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cgY-Nf-DLk" secondAttribute="trailing" id="zIQ-KM-VdT"/>
                                                 </constraints>
-                                                <size key="customSize" width="170" height="168"/>
+                                                <size key="customSize" width="150" height="150"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="48x-bi-YnD"/>
+                                                        <exclude reference="4Tu-V6-olq"/>
+                                                        <exclude reference="HMZ-iI-2sC"/>
+                                                        <exclude reference="Inj-bJ-fax"/>
+                                                        <exclude reference="Q09-sS-RL7"/>
+                                                        <exclude reference="S2Q-fa-rDb"/>
+                                                    </mask>
+                                                </variation>
                                                 <connections>
                                                     <outlet property="HideImage" destination="cgY-Nf-DLk" id="ZmB-X2-o8U"/>
                                                     <outlet property="OriginImage" destination="sQM-EI-2MC" id="6vf-hc-1eO"/>
@@ -209,21 +225,26 @@
                                         </cells>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="jjC-12-T8R"/>
                                                 <exclude reference="r2b-uI-fwl"/>
                                             </mask>
                                         </variation>
                                     </collectionView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gQb-CW-eKH" secondAttribute="trailing" id="5IG-5D-6ym"/>
                                     <constraint firstAttribute="centerX" secondItem="gQb-CW-eKH" secondAttribute="centerX" id="98j-QF-gNN"/>
-                                    <constraint firstItem="gQb-CW-eKH" firstAttribute="width" secondItem="QQj-jp-FP9" secondAttribute="width" constant="-10" id="GHt-pN-SaP"/>
+                                    <constraint firstItem="gQb-CW-eKH" firstAttribute="width" secondItem="QQj-jp-FP9" secondAttribute="width" id="GHt-pN-SaP"/>
                                     <constraint firstAttribute="centerY" secondItem="gQb-CW-eKH" secondAttribute="centerY" id="LoI-CR-WEl"/>
                                     <constraint firstItem="gQb-CW-eKH" firstAttribute="width" secondItem="QQj-jp-FP9" secondAttribute="width" id="b1w-R6-AuI"/>
+                                    <constraint firstItem="gQb-CW-eKH" firstAttribute="top" secondItem="QQj-jp-FP9" secondAttribute="top" id="miB-5k-wI5"/>
+                                    <constraint firstAttribute="bottom" secondItem="gQb-CW-eKH" secondAttribute="bottom" id="toh-KN-7Lc"/>
                                     <constraint firstItem="gQb-CW-eKH" firstAttribute="height" secondItem="QQj-jp-FP9" secondAttribute="height" constant="-100" id="wb3-Jy-sym"/>
                                     <constraint firstItem="gQb-CW-eKH" firstAttribute="width" secondItem="QQj-jp-FP9" secondAttribute="height" multiplier="150:103" id="yBy-QW-jPg"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="5IG-5D-6ym"/>
                                         <exclude reference="b1w-R6-AuI"/>
                                         <exclude reference="wb3-Jy-sym"/>
                                         <exclude reference="yBy-QW-jPg"/>
@@ -656,6 +677,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Eu-2R-2Yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="43" y="1000"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YnP-6o-eGA">
+            <objects>
+                <viewController id="xnV-VR-afP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6UV-cc-hh7"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Px-ML-tOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="twr-zd-Uft">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQW-8H-dQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

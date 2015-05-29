@@ -55,6 +55,17 @@ class UserProfile: NSObject {
         }
     }
     
+    var numberColAndRow : (Int, Int) {
+        get{
+            switch level {
+                case "24": return (4,6)
+                case "48": return (3,16)
+                case "12": fallthrough
+                default: return (4,3)
+            }
+        }
+    }
+    
     var theme: String {
         set{
             setStringToNSUserDefault(Setting.ThemeKey, value: newValue)

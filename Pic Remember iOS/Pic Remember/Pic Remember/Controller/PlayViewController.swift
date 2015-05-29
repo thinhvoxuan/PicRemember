@@ -9,7 +9,7 @@
 import UIKit
 import KxMenu
 
-class PlayViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class PlayViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIAlertViewDelegate {
     
     
     var totalTime = 0
@@ -21,11 +21,14 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
     let padding = 1
     var numberInRow = 3
     var numberInCol = 4
+    var totalItem = 12
     
     var arrayItem = [Int]()
     var arrayCorrect = [Int]()
     
     var cardModel = CardModelManager()
+    
+    var user = UserProfile()
 
     
     @IBOutlet weak var cardGrid: UICollectionView! {
@@ -38,7 +41,17 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false);
-        cardModel.genArrayListCard(12)
+        (numberInCol, numberInRow) = user.numberColAndRow
+        totalItem = numberInCol * numberInRow
+        if(totalItem / 2  > cardModel.totalCard) {
+            UIAlertView(title: "ERROR", message: "Not enough image", delegate: self, cancelButtonTitle: "OK").show()
+        }
+        cardModel.genArrayListCard(totalItem)
+    }
+    
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
+        quitGame()
     }
     
     @IBAction func openOption(sender: UIBarButtonItem) {
@@ -55,6 +68,11 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func addIndex(idx: Int){
+        
+        if (contains(arrayItem, idx)){
+            return;
+        }
+        
         arrayItem.append(idx)
         if (arrayItem.count > 0 && arrayItem.count % 2 == 0){
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 *  Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
@@ -103,16 +121,22 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // MARK: - Collection Datasource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 12
+        return totalItem
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
             "cardCell", forIndexPath: indexPath) as! CardCollectionCell
+        
         let row = indexPath.row
         
+        println("\(cell.frame)")
+        println("\(cell.HideImage.frame)")
+        println("\(cell.layoutMargins.top)")
+        
         cell.hidden = false
+        
         let imageName = self.cardModel.arrayRandomCard[row]
         cell.OriginImage.image = UIImage(named: imageName)
         cell.OriginImage.hidden = true;
@@ -130,9 +154,22 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
-        let sizeWidth = Int(collectionView.bounds.width) / numberInCol - numberInCol * padding;
-        let sizeHeight = Int(collectionView.bounds.height) / numberInRow - numberInRow * padding;
-        return CGSize(width: sizeWidth, height: sizeHeight);
+        
+        let sizeWidth = Int(collectionView.frame.width) / numberInCol;
+        let sizeHeight = Int(collectionView.frame.height) / numberInRow;
+        
+        let size = min(sizeWidth, sizeHeight)
+        return CGSize(width: size, height: size);
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets{
+        return UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat{
+        return 0
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat{
+        return 0
     }
     
     // MARK: - Collection Delegate
