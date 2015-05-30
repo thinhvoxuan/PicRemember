@@ -129,6 +129,7 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
             "cardCell", forIndexPath: indexPath) as! CardCollectionCell
         
+        
         let row = indexPath.row
         
         println("\(cell.frame)")

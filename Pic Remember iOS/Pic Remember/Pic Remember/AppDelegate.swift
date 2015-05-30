@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let hm = HistoryManager.sharedInstance
+        
+        let r = Realm()
+        println(r.path)
+        
+//        for idx in 1...10{
+//            hm.saveHistory("thinh\(idx)", totaltime: 1, totalclick: 1, level: "12")
+//        }
+        
+        
+        println(hm.getHistoryWithLevel("12"))
+        
+        
         // Override point for customization after application launch.
         return true
     }
