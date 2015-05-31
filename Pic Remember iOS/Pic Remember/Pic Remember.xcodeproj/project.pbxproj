@@ -17,6 +17,7 @@
 		14D890341B18D90800610A8E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D890311B18D90800610A8E /* RealmSwift.framework */; };
 		14D890351B18D90800610A8E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14D890311B18D90800610A8E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14D890381B18E0E000610A8E /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D890371B18E0E000610A8E /* HistoryManager.swift */; };
+		14F096961B1B73C9003C6795 /* HistoryItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F096951B1B73C9003C6795 /* HistoryItemCellTableViewCell.swift */; };
 		14F40FBE1B146448009B82DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F40FBD1B146448009B82DF /* AppDelegate.swift */; };
 		14F40FC31B146448009B82DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F40FC11B146448009B82DF /* Main.storyboard */; };
 		14F40FC81B146448009B82DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F40FC61B146448009B82DF /* LaunchScreen.xib */; };
@@ -64,6 +65,7 @@
 		14D890301B18D90800610A8E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		14D890311B18D90800610A8E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		14D890371B18E0E000610A8E /* HistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryManager.swift; path = Model/HistoryManager.swift; sourceTree = "<group>"; };
+		14F096951B1B73C9003C6795 /* HistoryItemCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryItemCellTableViewCell.swift; path = CustomUI/HistoryItemCellTableViewCell.swift; sourceTree = "<group>"; };
 		14F40FB81B146448009B82DF /* Pic Remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic Remember.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F40FBC1B146448009B82DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F40FBD1B146448009B82DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				145314C01B17426000042B96 /* CardCollectionCell.swift */,
+				14F096951B1B73C9003C6795 /* HistoryItemCellTableViewCell.swift */,
 			);
 			name = CustomUI;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				14F40FE61B14678F009B82DF /* OptionViewController.swift in Sources */,
 				146C371E1B15AFB700F260D7 /* UserProfile.swift in Sources */,
 				142D4B311B18D706004119AD /* History.swift in Sources */,
+				14F096961B1B73C9003C6795 /* HistoryItemCellTableViewCell.swift in Sources */,
 				143202C71B18178600C36339 /* CardModelManager.swift in Sources */,
 				14F40FE81B14748F009B82DF /* ScoreViewController.swift in Sources */,
 				14F40FE41B14677B009B82DF /* PlayViewController.swift in Sources */,

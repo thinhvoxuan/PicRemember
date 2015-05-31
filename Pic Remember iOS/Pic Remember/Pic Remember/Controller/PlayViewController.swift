@@ -27,8 +27,8 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
     var arrayCorrect = [Int]()
     
     var cardModel = CardModelManager()
-    
     var user = UserProfile()
+    var historyManager = HistoryManager.sharedInstance
 
     
     @IBOutlet weak var cardGrid: UICollectionView! {
@@ -42,16 +42,12 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false);
         (numberInCol, numberInRow) = user.numberColAndRow
+        (numberInCol, numberInRow) = (2,2)
         totalItem = numberInCol * numberInRow
         if(totalItem / 2  > cardModel.totalCard) {
             UIAlertView(title: "ERROR", message: "Not enough image", delegate: self, cancelButtonTitle: "OK").show()
         }
         cardModel.genArrayListCard(totalItem)
-    }
-    
-    
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
-        quitGame()
     }
     
     @IBAction func openOption(sender: UIBarButtonItem) {
@@ -82,12 +78,36 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
                     if self.sameCard(first, secondElement: second) {
                         self.arrayCorrect.append(first)
                         self.arrayCorrect.append(second)
+                        
+                        if(self.arrayCorrect.count == self.totalItem){
+                            self.stopTimmer();
+                            self.openPopUpUsername();
+                        }
+                        
                     }
                     self.cardGrid.reloadData()
                 }
             })
         }
         self.cardGrid.reloadData()
+    }
+    
+    func openPopUpUsername(){
+        let alert = UIAlertView(title: "Enter Name", message: nil, delegate: self, cancelButtonTitle: "OK");
+        alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
+        alert.show();
+    }
+    
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if let name = alertView.textFieldAtIndex(0)?.text {
+            saveHistory(name)
+        }
+    }
+    
+    func saveHistory(username: String){
+        historyManager.saveHistory(username, totaltime: self.totalTime, totalclick: self.totalClick, level: self.user.level)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -131,10 +151,6 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
         let row = indexPath.row
-        
-        println("\(cell.frame)")
-        println("\(cell.HideImage.frame)")
-        println("\(cell.layoutMargins.top)")
         
         cell.hidden = false
         
